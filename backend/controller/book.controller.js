@@ -8,7 +8,7 @@ export const getBook= async (req,res)=>{
     } catch (error) {
       console.log("Error",error);
       // res.status(500).json(error)
-        res.status(500).json({ message: "Failed to fetch books", error: error.message });
+        res.status(500).json(error);
 
     }
 };

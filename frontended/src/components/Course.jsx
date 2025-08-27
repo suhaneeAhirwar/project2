@@ -1,5 +1,5 @@
  import React from 'react'
- import list from "../components/data/list.json";
+//  import list from "../components/data/list.json";
  import Cards from "../components/Cards"
  import {Link} from "react-router-dom"
  import axios from "axios";
@@ -13,7 +13,7 @@ function Course() {
       try {
        const res  =await axios.get("http://localhost:4001/book");
        console.log(res.data);
-       
+        setBook(res.data);
         
       } catch (error) {
         console.log(error);
